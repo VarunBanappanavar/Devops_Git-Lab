@@ -1,0 +1,27 @@
+IAM Assignment
+
+1. Cross Account S3 Access. 
+
+
+2. Create a new user --> User should change the password on First Login -- User can change there own password --- USer can do MFA Enforcement - Google Authenticator 
+
+
+3. Create a two ec2 instances and Create 2 IAM user
+
+    IAM user A - Can able to stop EC2 instance1 not instance 2 
+
+    IAM user B - Can able to stop EC2 instance2 not instance 1
+
+
+5. Allowed user to login to AWS Console from Specific IP - Public. 
+
+     Whiltelist know IP's  policy With IP Conditions. 
+
+     Example - Use your own public IP. 
+
+
+6. IAM Policy with Conditions
+
+Write a policy that allows S3 access only from a specific IP address.
+
+Apply it to a user and test with allowed vs disallowed IPs.
