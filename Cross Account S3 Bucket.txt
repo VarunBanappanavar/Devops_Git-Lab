@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowStopSpecficInstance",
+            "Effect": "Allow",
+            "Action": "ec2:StopInstances",
+            "Resource": "arn:aws:ec2:us-east-1:537452063432:instance/i-0efa08b6abb370d8b"
+        },
+        {
+            "Sid": "DenyStopSpecficInstance",
+            "Effect": "Deny",
+            "Action": "ec2:StopInstances",
+            "Resource": "*",
+            "Condition": {
+                "StringNotEquals": {
+                    "ec2:ResourceTag/Name": "Test_Linux_Server"
+                }
+            }
+        },
+        {
+            "Sid": "AllowDescribeInstances",
+            "Effect": "Allow",
+            "Action": "ec2:DescribeInstances",
+            "Resource": "*"
+        }
+    ]
+}
